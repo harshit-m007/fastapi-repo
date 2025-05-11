@@ -8,8 +8,8 @@ from langgraph.graph.message import add_messages
 from typing_extensions import TypedDict
 from typing import Annotated
 
-# groq_api_key = os.environ.get("GROQ_API_KEY")
-llm = ChatGroq(groq_api_key='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', model_name="gemma-7b-it")
+groq_api_key = os.environ.get("GROQ_API_KEY")
+llm = ChatGroq(groq_api_key=groq_api_key, model_name="gemma-7b-it")
 
 class State(TypedDict):
     messages: Annotated[list, add_messages]
